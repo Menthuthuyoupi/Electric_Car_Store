@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #dadada;
+    grid-area: buscador;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+}
+
+menu{
+    background-color: #1a5092;
+    grid-area: navegador;
+    color:white;
+}
+
+main{
+    grid-area: principal;
+    background-color: white;
+}
+
+footer{
+    color: white;
+    background-color: #052b6b;
+    grid-area: footer;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "navegador buscador"
+    "navegador principal"
+    "footer principal"
+    ;
+    grid-template-columns:1fr 9fr;
+    grid-template-rows:1fr 12fr 2fr;
+
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busqueda{
+    width: 87vw;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px;
+    background-color: white;
+    border:1px #dadada solid;
+    border-radius: 5px;
+    margin:5px 0 5px 0;
+}
+
+.p-electric-cars{
+    margin-left:10px;
+}
+
+.item-menu{
+    margin-bottom: 10px;
+}
+
+.main-productos{
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+    gap: 25px 10px;
+    padding: 15px 10px 5px 20px;
+    overflow-y: scroll;
+    margin-right: 20px;
+    height: 78vh;
+}
+
+.card{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px #dadada;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 90%;
+    height: 25vh;
+    margin-bottom: 10px;
+}
+
+.mas-info{
+    width:100px;
+    height: 30px;
+    color: white;
+    background-color: #1a5092;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.mas-info:hover{
+    background-color: #052b6b;
+}
+
+.paginacion{
+    box-sizing: border-box;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #1a5092;
+    width: 40px;
+    height: 40px;
+    border: 1px #dadada solid;
+    font-weight: 100;
+}
+
+td i{
+    font-size: 0.8rem;
+}
+
+.centrar i{
+    font-size: 1.5rem;
+    padding-right:5px;
+    padding-top:5px;
+}
+
+.p-legal{
+    text-align: center;
+    padding-top:20px
+}
+
+
+@media (max-width: 576px){
+    body{
+        grid-template-areas:
+        "navegador navegador"
+        "buscador buscador"
+        "principal principal"
+        "footer footer"
+        ;
+        grid-template-rows: 1fr 1fr 10fr 1fr;
+        box-sizing: border-box;
+        height: 100vh;
+    }
+
+    div p{
+        margin-bottom: 5px;
+    }
+
+    .busqueda{
+        height: 50px;
+    }
+
+    menu{
+        display: flex;
+        justify-content: space-between;
+        padding:0px 20px;
+
+    }
+
+    .main-productos{
+        height: 60vh;
+        grid-template-columns: 1fr;
+        gap: 20px 0px;
+        padding: 10px 10px 5px 10px;
+    }
+    
+
+
+}
+
+
+
